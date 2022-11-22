@@ -84,4 +84,8 @@ export default {
     padding: 32px;
   }
 }
+
+.v-text-field {
+    left: 0;
+}
 </style>
