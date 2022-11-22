@@ -1,26 +1,21 @@
 <script>
 import SideBar from "@/components/SideBar.vue";
-import Student from "@/components/Student.vue";
+import Dashboard from "@/components/Dashboard/Dashboard.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  // name: 'BookView',
 
   components: {
     SideBar,
-    Student,
+    Dashboard,
   },
 });
 </script>
 
 <template>
   <SideBar />
-  <h2 class="title">Student Details</h2>
-  <dir class="table"><Student /></dir>
-  <div class="add-btn">
-    <a style="text-decoration: none" href="/addstudent">
-      <v-btn color="warning" dark> Add New Student </v-btn>
-    </a>
-  </div>
+  <Dashboard />
 </template>
 
 <style>
@@ -37,5 +32,11 @@ export default defineComponent({
   position: absolute;
   left: 300px;
   top: 150px;
+}
+
+.add-btn {
+  position: absolute;
+  top: 60px;
+  left: 1200px;
 }
 </style>

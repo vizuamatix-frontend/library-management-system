@@ -1,26 +1,7 @@
 <script>
-import Popup from "./Popup.vue";
-import { ref } from "vue";
 
 export default {
-  setup() {
-    const popupTriggers = ref({
-      buttonTrigger: false,
-    });
 
-    const TogglePopup = (trigger) => {
-      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
-    };
-
-    return {
-      popupTriggers,
-      Popup,
-      TogglePopup,
-    };
-  },
-  components: {
-    Popup,
-  },
   data() {
     return {
       users: [
@@ -67,27 +48,11 @@ export default {
         <th>Student Name</th>
         <th>Email Address</th>
         <th>Contact number</th>
-        <th>Edit</th>
-        <th>Delete</th>
       </tr>
       <tr v-for="user in users" :key="user.id">
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.contact_no }}</td>
-        <td>
-          <v-btn
-            @click="() => TogglePopup('buttonTrigger')"
-            depressed
-            color="success"
-          >
-            Edit
-          </v-btn>
-          <Popup
-            v-if="popupTriggers.buttonTrigger"
-            :TogglePopup="() => TogglePopup('buttonTrigger')"
-          ></Popup>
-        </td>
-        <td><v-btn depressed color="error"> Delete </v-btn></td>
       </tr>
     </table>
   </div>

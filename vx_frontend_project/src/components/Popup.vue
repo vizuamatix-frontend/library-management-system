@@ -24,19 +24,20 @@
           label="Phone Number"
           required
         ></v-text-field>
+        <v-container class="btn-container">
+          <v-btn
+            :disabled="!valid"
+            color="success"
+            class="mr-4"
+            @click="validate, TogglePopup()"
+          >
+            Confirm
+          </v-btn>
 
-        <v-btn
-          :disabled="!valid"
-          color="success"
-          class="mr-4"
-          @click="validate, TogglePopup()"
-        >
-          Confirm
-        </v-btn>
-
-        <v-btn color="error" class="mr-4" @click="TogglePopup()">
-          Cancel
-        </v-btn>
+          <v-btn color="error" class="mr-4" @click="TogglePopup()">
+            Cancel
+          </v-btn>
+        </v-container>
       </v-form>
     </div>
   </div>
@@ -60,7 +61,8 @@ export default {
     phoneNumber: "",
     phoneNumberRules: [
       (v) => !!v || "Contact no is required",
-      (v) => (v && v.length <= 10) || "Contact no must be less than 11 characters",
+      (v) =>
+        (v && v.length <= 10) || "Contact no must be less than 11 characters",
     ],
   }),
 };
@@ -86,6 +88,10 @@ export default {
 }
 
 .v-text-field {
-    left: 0;
+  left: 0;
+}
+
+.btn-container{
+  text-align: center;
 }
 </style>
