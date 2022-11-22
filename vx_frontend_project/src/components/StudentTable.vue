@@ -32,12 +32,14 @@ import {
       >
         View
       </v-btn></td>
-      <td><v-btn
+      <td>
+      <v-btn
       depressed
       color="success"
     >
       Edit
-    </v-btn></td>
+    </v-btn>
+    </td>
       <td><v-btn
       depressed
       color="error"
