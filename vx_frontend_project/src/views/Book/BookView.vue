@@ -30,7 +30,16 @@
     <SideBar />
     <h2 class="title">Book Details</h2>
     <dir class="table"><StudentTableVue /></dir>
-    
+    <div class="add-btn">
+        <a style="text-decoration: none" href="/addbook">
+        <v-btn
+              color="warning"
+              dark
+            >
+              Add New Book
+        </v-btn>
+        </a>
+    </div>
     
 </template>
 
@@ -52,5 +61,11 @@
         position: absolute;
         left: 300px;
         top: 150px;
+    }
+
+    .add-btn{
+        position: absolute;
+        top: 60px;
+        left: 1200px;
     }
 </style>
