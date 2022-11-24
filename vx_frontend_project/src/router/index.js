@@ -7,6 +7,8 @@ import AddBook from "@/views/Book/AddBook.vue";
 import AddStudent from "@/views/Student/AddStudent.vue";
 import AddNotice from "@/views/notices/AddNotice.vue";
 import DashboardView from "@/views/DashboardView.vue";
+import Login from "@/views/Login.vue";
+import Signup from "@/views/Signup.vue";
 
 
 const routes = [
@@ -60,6 +62,16 @@ const routes = [
     path: "/addnotice",
     name: "addnotice",
     component: AddNotice,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: Signup,
   },
 ];
 

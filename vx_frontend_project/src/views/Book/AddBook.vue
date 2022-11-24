@@ -65,7 +65,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     .title{
         position: absolute;
         font-size: 40px;
