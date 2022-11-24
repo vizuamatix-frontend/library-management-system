@@ -40,8 +40,8 @@ export default {
   <div style="overflow-x: auto">
     <table>
       <tr>
-        <th>Student Name</th>
-        <th>Email Address</th>
+        <th>Book Name</th>
+        <th>Author</th>
       </tr>
       <tr v-for="book in books" :key="book.id">
         <td>{{ book.name }}</td>

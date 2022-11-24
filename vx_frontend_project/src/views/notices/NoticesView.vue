@@ -1,43 +1,51 @@
 <script>
 import SideBar from "@/components/SideBar.vue";
-import Dashboard from "@/components/Dashboard/Dashboard.vue";
+import Notice from "@/components/Notice.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  // name: 'BookView',
 
   components: {
     SideBar,
-    Dashboard,
+    Notice,
+
   },
 });
 </script>
 
 <template>
   <SideBar />
-  <h2 class="dashboard-title">Dashboard</h2>
-  <dir><Dashboard /></dir>
+  <h2 class="title">Notices</h2>
+  <dir class="table"><Notice /></dir>
+  <div class="add-btn">
+    <a style="text-decoration: none" href="addnotice">
+      <v-btn color="warning" dark> Add New Notice </v-btn>
+    </a>
+  </div>
 </template>
 
-<style>
-.dashboard-title {
+<style scoped>
+.title {
   position: absolute;
   font-size: 40px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   top: 40px;
-  left: 720px;
+  left: 350px;
 }
 
 .table {
   position: absolute;
-  left: 300px;
+  /* margin: auto; */
+  right: 100px;
+  left: 350px;
   top: 150px;
 }
-
-.add-btn {
+.add-btn{
   position: absolute;
-  top: 60px;
-  left: 1200px;
+  margin: auto;
+  margin-top: 550px;
+  margin-right: 700px;
+  
 }
 </style>

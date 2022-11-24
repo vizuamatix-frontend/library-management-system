@@ -3,27 +3,25 @@
     <div class="popup-inner">
       <slot />
       <v-form ref="form" v-model="valid" lazy-validation>
+        <v-text-label>Name</v-text-label>
         <v-text-field
           v-model="name"
           :counter="10"
           :rules="nameRules"
-          label="Name"
           required
-        ></v-text-field>
-
+        >{{students[0].name}}</v-text-field>
+        <v-text-label>Email</v-text-label>
         <v-text-field
           v-model="email"
           :rules="emailRules"
-          label="E-mail"
           required
-        ></v-text-field>
-
+        >{{students[0].email}}</v-text-field>
+        <v-text-label>Phone Number</v-text-label>
         <v-text-field
           v-model="phoneNumber"
           :rules="phoneNumberRules"
-          label="Phone Number"
           required
-        ></v-text-field>
+        >{{students[0].contact_no}}</v-text-field>
         <v-container class="btn-container">
           <v-btn
             :disabled="!valid"
@@ -45,7 +43,7 @@
 
 <script>
 export default {
-  props: ["TogglePopup"],
+  props: ["TogglePopup", "students"],
   data: () => ({
     valid: true,
     name: "",
@@ -91,7 +89,7 @@ export default {
   left: 0;
 }
 
-.btn-container{
+.btn-container {
   text-align: center;
 }
 </style>

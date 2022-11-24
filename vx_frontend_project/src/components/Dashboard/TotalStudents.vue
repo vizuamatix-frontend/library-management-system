@@ -19,9 +19,9 @@ export default {};
 
 <style>
 .total-student-card {
+  padding: 10px;
   background-color: #d3d3d3;
   min-width: 270px;
-  background-color: #d3d3d3;
 }
 .students-icon{
     margin-right: 20px;

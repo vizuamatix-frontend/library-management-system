@@ -2,11 +2,14 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import BookView from "../views/Book/BookView.vue";
 import StudentView from "../views/Student/StudentView.vue";
+import NoticesView from "../views/notices/NoticesView.vue"
 import AddBook from "@/views/Book/AddBook.vue";
 import AddStudent from "@/views/Student/AddStudent.vue";
+import AddNotice from "@/views/notices/AddNotice.vue";
 import DashboardView from "@/views/DashboardView.vue";
 import Login from "@/views/Login.vue";
 import Signup from "@/views/Signup.vue";
+
 
 const routes = [
   {
@@ -47,6 +50,18 @@ const routes = [
     path: "/dashboard",
     name: "dashboard",
     component: DashboardView,
+  },
+
+  //routing for the notices
+  {
+    path: "/noticesview",
+    name: "noticesview",
+    component: NoticesView,
+  },
+  {
+    path: "/addnotice",
+    name: "addnotice",
+    component: AddNotice,
   },
   {
     path: "/login",
