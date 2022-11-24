@@ -84,10 +84,10 @@ export default {
           >
             View
           </v-btn>
-          <Popup
+          <NoticePopup
             v-if="popupTriggers.buttonTrigger"
             :TogglePopup="() => TogglePopup('buttonTrigger')"
-          ></Popup>
+          ></NoticePopup>
         </td>
         <td><v-btn depressed color="error"> Delete </v-btn></td>
       </tr>
