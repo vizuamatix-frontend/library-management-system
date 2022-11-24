@@ -15,7 +15,7 @@ export default defineComponent({
 <template>
   <SideBar />
   <h2 class="title">Student Details</h2>
-  <dir class="table"><Student /></dir>
+  <dir class="student-table"><Student /></dir>
   <div class="add-btn">
     <a style="text-decoration: none" href="/addstudent">
       <v-btn color="warning" dark> Add New Student </v-btn>
@@ -33,9 +33,10 @@ export default defineComponent({
   left: 350px;
 }
 
-.table {
+.student-table {
   position: absolute;
   left: 300px;
   top: 150px;
+  width: 75%;
 }
 </style>

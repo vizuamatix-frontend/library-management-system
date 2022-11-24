@@ -15,17 +15,18 @@ export default defineComponent({
 
 <template>
   <SideBar />
-  <Dashboard />
+  <h2 class="dashboard-title">Dashboard</h2>
+  <dir><Dashboard /></dir>
 </template>
 
 <style>
-.title {
+.dashboard-title {
   position: absolute;
   font-size: 40px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   top: 40px;
-  left: 350px;
+  left: 720px;
 }
 
 .table {

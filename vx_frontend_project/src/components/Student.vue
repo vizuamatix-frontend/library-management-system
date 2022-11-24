@@ -57,6 +57,11 @@ export default {
       ],
     };
   },
+  methods: {
+  removeElement: function (index) {
+    this.users.splice(index, 1);
+  }
+},
 };
 </script>
 
@@ -83,11 +88,12 @@ export default {
             Edit
           </v-btn>
           <Popup
+            v-bind:students="users"
             v-if="popupTriggers.buttonTrigger"
             :TogglePopup="() => TogglePopup('buttonTrigger')"
           ></Popup>
         </td>
-        <td><v-btn depressed color="error"> Delete </v-btn></td>
+        <td><v-btn depressed color="error" v-on:click="removeElement(key)"> Delete </v-btn></td>
       </tr>
     </table>
   </div>
