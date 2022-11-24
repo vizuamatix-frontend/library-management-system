@@ -1,6 +1,6 @@
 <script>
 //import Popup from "./Popup.vue";
-//import NoticePopup from "./NoticePopup.vue";
+import NoticePopup from "./NoticePopup.vue";
 import { ref } from "vue";
 
 export default {
@@ -15,12 +15,12 @@ export default {
 
     return {
       popupTriggers,
-      //NoticePopupVue,
+      NoticePopup,
       TogglePopup,
     };
   },
   components: {
-    //NoticePopup,
+    NoticePopup,
     //Popup,
   },
   data() {
@@ -82,7 +82,7 @@ export default {
             depressed
             color="success"
           >
-            Edit
+            View
           </v-btn>
           <Popup
             v-if="popupTriggers.buttonTrigger"

@@ -4,24 +4,31 @@
         <slot />
         <v-form ref="form" v-model="valid" lazy-validation>
           <v-text-field
-            v-model="subject"
+            v-model="date"
             :counter="10"
+            :rules="dateRules"
+            label="Date"
+            required
+          ></v-text-field>
+  
+          <v-text-field
+            v-model="subject"
             :rules="subjectRules"
             label="Subject"
             required
           ></v-text-field>
   
           <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            label="E-mail"
+            v-model="publisher"
+            :rules="publisherRules"
+            label="Publisher"
             required
           ></v-text-field>
-  
+
           <v-text-field
-            v-model="phoneNumber"
-            :rules="phoneNumberRules"
-            label="Phone Number"
+            v-model="content"
+            :rules="contentRules"
+            label="Content"
             required
           ></v-text-field>
           <v-container class="btn-container">
@@ -44,26 +51,29 @@
   </template>
   
   <script>
-  /* eslint-disable vue/no-unused-components */
   export default {
     props: ["TogglePopup"],
     data: () => ({
       valid: true,
+      date: "",
+      dateRules: [
+        (v) => !!v || "Date is required in DD/MM/YYYY format",
+        // (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
+      ],
       subject: "",
       subjectRules: [
-        (v) => !!v || "Subject is required",
-        (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
+        (v) => !!v || "Subject is required (Maximum 100 Characters)",
+        (v) => (v && v.length <= 200) || "Name must be less than 200 characters",
       ],
-      email: "",
-      emailRules: [
-        (v) => !!v || "E-mail is required",
-        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      publisher: "",
+      publisherRules: [
+        (v) => !!v || "Publisher Name is required",
+        (v) => (v && v.length <= 50) || "Publisher Name must be less than 50 characters",
       ],
-      phoneNumber: "",
-      phoneNumberRules: [
-        (v) => !!v || "Contact no is required",
-        (v) =>
-          (v && v.length <= 10) || "Contact no must be less than 11 characters",
+      content: "",
+      contentRules: [
+        (v) => !!v || "Content is required (Maximum 1000 Characters)",
+        (v) => (v && v.length <= 1000) || "Name must be less than 1000 characters",
       ],
     }),
   };
