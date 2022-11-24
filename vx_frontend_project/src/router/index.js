@@ -5,6 +5,8 @@ import StudentView from "../views/Student/StudentView.vue";
 import AddBook from "@/views/Book/AddBook.vue";
 import AddStudent from "@/views/Student/AddStudent.vue";
 import DashboardView from "@/views/DashboardView.vue";
+import Login from "@/views/Login.vue";
+import Signup from "@/views/Signup.vue";
 
 const routes = [
   {
@@ -45,6 +47,16 @@ const routes = [
     path: "/dashboard",
     name: "dashboard",
     component: DashboardView,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: Signup,
   },
 ];
 
