@@ -30,6 +30,7 @@ export default {
           date: "11/23/2022",
           subject: "guidelines for library premises",
           publish_by: "Jhon Doe - Librarian",
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           date: "11/20/2022",
@@ -58,7 +59,13 @@ export default {
         },
       ],
     };
+
   },
+  methods: {
+    removeElement: function(index) {
+      this.notices.splice(index, 1);
+    }
+  }
 };
 </script>
 
@@ -72,10 +79,10 @@ export default {
         <th>Edit</th>
         <th>Delete</th>
       </tr>
-      <tr v-for="notices in notices" :key="notices.id">
-        <td>{{ notices.date }}</td>
-        <td>{{ notices.subject }}</td>
-        <td>{{ notices.publish_by }}</td>
+      <tr v-for="notice in notices" :key="notice.id">
+        <td>{{ notice.date }}</td>
+        <td>{{ notice.subject }}</td>
+        <td>{{ notice.publish_by }}</td>
         <td>
           <v-btn
             @click="() => TogglePopup('buttonTrigger')"
@@ -85,11 +92,12 @@ export default {
             View
           </v-btn>
           <NoticePopup
+            v-bind:notice="notices"
             v-if="popupTriggers.buttonTrigger"
             :TogglePopup="() => TogglePopup('buttonTrigger')"
           ></NoticePopup>
         </td>
-        <td><v-btn depressed color="error"> Delete </v-btn></td>
+        <td><v-btn depressed color="error" v-on:click="removeElement(key)"> Delete </v-btn></td>
       </tr>
     </table>
   </div>

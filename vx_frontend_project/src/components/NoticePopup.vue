@@ -7,30 +7,26 @@
             v-model="date"
             :counter="10"
             :rules="dateRules"
-            label="Date"
             required
-          ></v-text-field>
+          >{{notice[0].date}}</v-text-field>
   
           <v-text-field
             v-model="subject"
             :rules="subjectRules"
-            label="Subject"
             required
-          ></v-text-field>
+          >{{notice[0].subject}}</v-text-field>
   
           <v-text-field
             v-model="publisher"
             :rules="publisherRules"
-            label="Publisher"
             required
-          ></v-text-field>
+          >{{notice[0].publish_by}}</v-text-field>
 
           <v-text-field
             v-model="content"
             :rules="contentRules"
-            label="Content"
             required
-          ></v-text-field>
+          >{{notice[0].content}}</v-text-field>
           <v-container class="btn-container">
             <v-btn
               :disabled="!valid"
@@ -38,11 +34,11 @@
               class="mr-4"
               @click="validate, TogglePopup()"
             >
-              Confirm
+              Update
             </v-btn>
   
             <v-btn color="error" class="mr-4" @click="TogglePopup()">
-              Cancel
+              Back
             </v-btn>
           </v-container>
         </v-form>
@@ -52,7 +48,7 @@
   
   <script>
   export default {
-    props: ["TogglePopup"],
+    props: ["TogglePopup", "notice"],
     data: () => ({
       valid: true,
       date: "",
