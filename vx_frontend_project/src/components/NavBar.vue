@@ -30,7 +30,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 .navbar{
    background-color: black;        
 }
