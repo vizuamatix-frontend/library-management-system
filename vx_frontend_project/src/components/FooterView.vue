@@ -4,7 +4,7 @@
           elevation="0"
           rounded="0"
           width="100%"
-          class="bg-grey text-center"
+          class="bg-black text-center"
         >
           <v-card-text>
             <v-btn
@@ -49,6 +49,12 @@
   
   <style>
   .v-footer {
-    padding: 2px 0 !important;
+    position: absolute;
+    margin-top: 700px;
+    padding: 0px 0px 0px 0px !important;
+    height: 20px;
+    width:1700px;
   }
+
+  
   </style>
