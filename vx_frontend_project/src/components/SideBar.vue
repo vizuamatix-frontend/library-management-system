@@ -34,25 +34,28 @@
             <v-list-item-icon>
               <v-icon>mdi-view-dashboard</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Dashboard</v-list-item-title>
+            <v-list-item-title><router-link to="/dashboard">Dashboard</router-link></v-list-item-title>
           </v-list-item>
           <v-list-item link>
             <v-list-item-icon>
               <v-icon>mdi-folder</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Books</v-list-item-title>
+            <!-- <v-list-item-title>Books</v-list-item-title> -->
+            <v-list-item-title><router-link to="/bookview">Books</router-link></v-list-item-title>
           </v-list-item>
           <v-list-item link>
             <v-list-item-icon>
               <v-icon>mdi-account-multiple</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Students</v-list-item-title>
+            <!-- <v-list-item-title>Students</v-list-item-title> -->
+            <v-list-item-title><router-link to="/studentview">Students</router-link></v-list-item-title>
           </v-list-item>
           <v-list-item link>
             <v-list-item-icon>
               <v-icon>mdi-message-text</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Notices</v-list-item-title>
+            <!-- <v-list-item-title>Notices</v-list-item-title> -->
+            <v-list-item-title><router-link to="/noticesview">Notices</router-link></v-list-item-title>
           </v-list-item>
           <v-spacer></v-spacer>
           <v-btn flat color="grey">

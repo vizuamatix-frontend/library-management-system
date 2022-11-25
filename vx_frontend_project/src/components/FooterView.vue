@@ -52,9 +52,13 @@
     position: absolute;
     margin-top: 700px;
     padding: 0px 0px 0px 0px !important;
-    height: 20px;
+    height: 0px;
     width:1700px;
   }
 
-  
+  .text-white{
+    position: relative;
+    text-align: center;
+    margin-right: 100px;
+  }
   </style>

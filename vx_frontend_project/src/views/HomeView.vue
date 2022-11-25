@@ -1,5 +1,5 @@
 <template>
-  <!-- <SideBar /> -->
+  <NavBar />
   <FooterView />
   <img :src="require('../assets/BooRoomBackground.png')"/>
 </template>
@@ -9,11 +9,12 @@
 import { defineComponent } from 'vue';
 // Components
 import FooterView from "../components/FooterView.vue";
+import NavBar from "../components/NavBar.vue";
 export default defineComponent({
   name: 'HomeView',
   components: {
     FooterView,
-    //SideBar
+    NavBar
 },
 });
 </script>
@@ -22,6 +23,6 @@ export default defineComponent({
 img{
         position: absolute;
         width: 100%;
-        height: 720px;
+        height: 650px;
     }
 </style>
